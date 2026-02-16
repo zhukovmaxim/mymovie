@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MyApplication21.AppBarOverlay">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Детали фильма"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:titleTextColor="?attr/colorOnSurface" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/posterImageView"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:background="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"
+                tools:src="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp"
+                tools:text="Название фильма" />
+
+            <TextView
+                android:id="@+id/yearTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp"
+                tools:text="2023" />
+
+            <TextView
+                android:id="@+id/directorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textAlignment="center"
+                android:layout_marginBottom="16dp"
+                tools:text="Режиссер" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Оценка"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginBottom="8dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="0.5"
+                android:isIndicator="true"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textColor="?attr/colorPrimary"
+                android:layout_marginBottom="16dp"
+                tools:text="Просмотрено" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Актеры"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/actorsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_marginBottom="16dp"
+                tools:text="Актер 1, Актер 2, Актер 3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Описание"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_marginBottom="16dp"
+                tools:text="Описание фильма" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Рецензия"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/reviewTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                tools:text="Моя рецензия на фильм"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Редактировать"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Удалить"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

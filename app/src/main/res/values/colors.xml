@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Movie App Colors -->
+    <color name="primary">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="primary_light">#BB86FC</color>
+    <color name="accent">#03DAC5</color>
+    <color name="accent_dark">#018786</color>
+    
+    <!-- Status Colors -->
+    <color name="status_watched">#4CAF50</color>
+    <color name="status_want_to_watch">#FF9800</color>
+    <color name="status_in_progress">#2196F3</color>
+    
+    <!-- Background Colors -->
+    <color name="background_light">#FAFAFA</color>
+    <color name="background_dark">#121212</color>
+</resources>
